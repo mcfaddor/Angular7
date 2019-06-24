@@ -1,0 +1,84 @@
+// import { Component, OnInit } from '@angular/core';
+// import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+// import { AuthService } from '../auth.service';
+// import { Router } from '@angular/router';
+
+
+
+// @Component({
+//   selector: 'app-register',
+//   templateUrl: './register.component.html',
+//   styleUrls: ['./register.component.css']
+// })
+
+
+
+// export class RegisterComponent implements OnInit {
+
+
+
+//   constructor(private authService: AuthService, private router: Router, private formBuilder: FormBuilder) { }
+
+//   registerForm: FormGroup;
+//   isSubmitted: boolean = false;
+//   show: boolean = false;
+
+//   get formControls() { return this.registerForm.controls }
+
+
+
+
+//   ngOnInit() {
+//     this.registerForm = this.formBuilder.group({
+
+//       firstname: ['', Validators.required],
+//       lastname: ['', Validators.required],
+//       middlename: [''],
+//       birthdate: ['', Validators.required],
+//       ShippingAddress: ['', Validators.required],
+//       ShippingCity: ['', Validators.required],
+//       ShippingCountry: ['', Validators.required],
+//       ShippingZip: ['', Validators.required],
+
+//       BillingAddress: [''],
+//       BillingCity: [''],
+//       BillingCountry: [''],
+//       BillingZip: [''],
+
+//       email: ['', Validators.required],
+//       password: ['', Validators.required],
+
+//     })
+//   }
+
+
+//   register() {
+//     this.isSubmitted = true;
+//     console.log("1")
+//     if( this.registerForm.invalid ) {
+//       console.log("2")
+//       return;
+//     }
+//     console.log("3")
+
+//     this.authService.register(this.registerForm.value).subscribe((registerres) => {
+//       console.log("4")
+
+//       if(registerres["success"]) {
+//         console.log("5")
+//         this.authService.login(this.registerForm.value).subscribe((loginres) => {
+          
+//           console.log("6")
+//           if(loginres["success"]) {
+//             console.log("7")
+//             this.router.navigateByUrl('/login');
+//             window.alert("Profile created successfully");
+//           } else {
+//             console.log("8")
+//             this.router.navigateByUrl('/register');
+//           }
+//         })
+//       }
+//     })
+//   }
+// }

@@ -1,0 +1,114 @@
+<app-header></app-header>
+
+<div class="container mt-5">
+
+
+  <form [formGroup]="updateForm" (ngSubmit)="updateUser()">
+
+
+    <h2>Personal information</h2>
+
+    <div class="form-row">
+
+      <label for="firstname">First name</label>
+      <input id="firstname" formControlName="firstname" type="text" class="form-control" id="firstname">
+      <label for="lastname">Last name</label>
+      <input formControlName="lastname" type="text" class="form-control" id="lastname">
+
+      <div class="form-group col-md-6">
+        <label for="middlename">Middle name</label>
+        <input formControlName="middlename" type="text" class="form-control" id="middlename">
+      </div>
+      <!-- <div class="form-group col-md-6">
+        <label for="birthdate">Birthdate</label>
+        <div class="form-inline">
+          <input formControlName="birthdate" class="form-control date" id="birthdate" name="birthdate"
+            placeholder="yyyy-mm-dd" ngbDatepicker #d="ngbDatepicker" />
+          <div class="input-group-append">
+
+            <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i
+                class="far fa-calendar-alt"></i></button>
+          </div>
+        </div>
+
+      </div> -->
+
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="ShippingAddress">Address</label>
+        <input formControlName="ShippingAddress" type="text" class="form-control" id="ShippingAddress">
+      </div>
+    </div>
+
+
+    <div class="form-row mb-5">
+      <div class="form-group col-md-6">
+        <label for="ShippingCity">City</label>
+        <input formControlName="ShippingCity" type="text" class="form-control" id="ShippingCity">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="ShippingCountry">Country</label>
+        <input formControlName="ShippingCountry" type="text" class="form-control" id="ShippingCountry">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="ShippingZip">Zip</label>
+        <input formControlName="ShippingZip" type="text" class="form-control" id="ShippingZip">
+      </div>
+
+    </div>
+
+
+
+
+    <h2>Billing address</h2>
+
+
+    <div class="form-row mb-4">
+
+      <div class="form-group col-md-12">
+        <label for="BillingAddress">Address</label>
+        <input formControlName="BillingAddress" type="text" class="form-control" id="BillingAddress">
+      </div>
+
+      <div class="form-group col-md-5">
+        <label for="BillingCity">City</label>
+        <input formControlName="BillingCity" type="text" class="form-control" id="BillingCity">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="BillingCountry">Country</label>
+        <input formControlName="BillingCountry" type="text" class="form-control" id="BillingCountry">
+      </div>
+      <div class="form-group col-md-3">
+        <label for="BillingZip">Zip</label>
+        <input formControlName="BillingZip" type="text" class="form-control" id="BillingZip">
+      </div>
+    </div>
+
+
+
+
+
+    <h2>Login information</h2>
+
+    <div class="form-row mb-4">
+      <div class="form-group col-md-6">
+        <label for="email">Email</label>
+        <input formControlName="email" type="email" class="form-control" id="email">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="password">Password</label>
+        <input formControlName="password" type="password" class="form-control" id="password">
+      </div>
+    </div>
+
+
+    <input type="submit" id="submitbutton" style="padding: auto" class="btn btn-primary" value="Update">
+
+
+  </form>
+</div>
+
+<app-footer></app-footer>
